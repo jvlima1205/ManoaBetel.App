@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/layout.astro";
+import CardBible from "../components/CardBible.astro";
+
+// Importa o arquivo JSON contendo os dados dos produtos
+import Bibles from "../data/Bibles.json";
+
+import Title from "../components/Title.astro";
+---
+
+<Layout>
+  <Title
+    title="Capas Feitas à Mão com Amor"
+    subtitle="Proteção e beleza para a sua Bíblia com acabamento exclusivo."
+  />
+
+  <!-- Grid Responsivo de Produtos -->
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {
+      Bibles.map((bible) => (
+        <CardBible
+          titulo={bible.titulo}
+          descricao={bible.descricao}
+          preco={bible.preco}
+          fotos={bible.fotos}
+        />
+      ))
+    }
+  </div>
+</Layout>

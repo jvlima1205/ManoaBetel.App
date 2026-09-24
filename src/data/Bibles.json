@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "titulo": "Com Brilho",
+        "descricao": "Brilhante como a estrela de Davi.",
+        "preco": 49.90,
+        "fotos": ["/images/BibliaBrilho1.png", "/images/BibliaBrilho2.png"]
+    }
+]

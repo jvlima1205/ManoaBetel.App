@@ -1,0 +1,7 @@
+Bourbon Gold (amber-600): Cor de destaque para botões principais, detalhes e bordas.
+
+Deep Navy (slate-900): Cor primária para cabeçalhos, textos e menus. Transmite confiança.
+
+Warm Cream (amber-500/5): Fundo principal das páginas. É mais suave para os olhos do que o branco puro.
+
+Charcoal (neutral-800): Para textos longos e descrições de leitura rápida.
