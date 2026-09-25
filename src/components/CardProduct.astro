@@ -1,0 +1,147 @@
+---
+// Pega as informações do produto passadas como propriedades (Props)
+// Substituímos "foto" por "fotos" (um array de URLs/caminhos de imagem)
+const { titulo, descricao, preco, fotos = [] } = Astro.props;
+
+// Garante que fotos seja sempre um array (caso passem foto única ou nada)
+const listaFotos = Array.isArray(fotos) && fotos.length > 0 
+  ? fotos 
+  : [Astro.props.foto || "/placeholder.jpg"];
+---
+
+<div data-card-bible class="bg-white rounded-2xl p-4 border border-rose-200 shadow-sm hover:shadow-md transition">
+  <!-- Container do Carrossel -->
+  <div class="carousel-container relative bg-rose-100 h-70 rounded-xl mb-4 overflow-hidden group">
+    
+    <!-- Imagem Principal -->
+    <button
+      type="button"
+      data-lightbox-trigger
+      class="block w-full h-full cursor-zoom-in"
+      aria-label={`Ampliar imagem de ${titulo}`}
+    >
+      <img 
+        data-carousel-img 
+        src={listaFotos[0]} 
+        alt={titulo} 
+        class="w-full h-70 object-cover transition-opacity duration-300" 
+      />
+    </button>
+
+    <!-- Botões de Navegação (só aparecem se houver mais de 1 foto) -->
+    {listaFotos.length > 1 && (
+      <>
+        <button 
+          data-prev 
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+          aria-label="Foto anterior"
+        >
+          &#10094;
+        </button>
+        <button 
+          data-next 
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+          aria-label="Próxima foto"
+        >
+          &#10095;
+        </button>
+        
+        <!-- Indicador de quantidade de fotos -->
+        <span 
+          data-counter 
+          class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-0.5 rounded-full"
+        >
+          1 / {listaFotos.length}
+        </span>
+      </>
+    )}
+  </div>
+
+  <dialog
+    data-lightbox-dialog
+    class="m-0 h-screen w-screen max-w-none max-h-none bg-black/90 p-4 text-white backdrop:bg-black/80"
+  >
+    <div class="flex h-full w-full items-center justify-center">
+      <img
+        data-lightbox-img
+        src={listaFotos[0]}
+        alt={titulo}
+        class="max-h-full max-w-full object-contain"
+      />
+      <button
+        type="button"
+        data-lightbox-close
+        class="absolute right-4 top-4 rounded-full bg-white/15 px-3 py-1 text-2xl leading-none hover:bg-white/25"
+        aria-label="Fechar visualização"
+      >
+        &times;
+      </button>
+    </div>
+  </dialog>
+
+  <h3 class="font-bold text-lg text-rose-950">{titulo}</h3>
+  <p class="text-rose-700 text-sm mb-4">
+    {descricao}
+  </p>
+  <div class="flex items-center justify-between">
+    <span class="text-xl font-bold text-rose-900">
+      R$ {preco.toFixed(2).replace(".", ",")}
+    </span>
+    
+  </div>
+</div>
+
+<!-- Lógica do Carrossel do Lado do Cliente -->
+<script is:inline define:vars={{ listaFotos }}>
+  const card = document.currentScript?.previousElementSibling;
+  const container = card?.querySelector('.carousel-container');
+
+  if (container) {
+    const img = container.querySelector('[data-carousel-img]');
+    const btnPrev = container.querySelector('[data-prev]');
+    const btnNext = container.querySelector('[data-next]');
+    const counter = container.querySelector('[data-counter]');
+    const lightboxTrigger = container.querySelector('[data-lightbox-trigger]');
+    const lightboxDialog = container.parentElement.querySelector('[data-lightbox-dialog]');
+    const lightboxImage = lightboxDialog?.querySelector('[data-lightbox-img]');
+    const lightboxClose = lightboxDialog?.querySelector('[data-lightbox-close]');
+
+    if (lightboxTrigger && lightboxDialog && lightboxImage) {
+      lightboxTrigger.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        lightboxDialog.showModal();
+      });
+
+      lightboxClose?.addEventListener('click', () => lightboxDialog.close());
+      lightboxDialog.addEventListener('click', (event) => {
+        if (event.target === lightboxDialog) lightboxDialog.close();
+      });
+    }
+
+    if (btnPrev && btnNext && listaFotos.length > 1) {
+      let currentIndex = 0;
+
+      const updateImage = (index) => {
+        currentIndex = index;
+        if (currentIndex < 0) currentIndex = listaFotos.length - 1;
+        if (currentIndex >= listaFotos.length) currentIndex = 0;
+
+        img.src = listaFotos[currentIndex];
+        if (counter) {
+          counter.textContent = `${currentIndex + 1} / ${listaFotos.length}`;
+        }
+      };
+
+      btnPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        updateImage(currentIndex - 1);
+      });
+
+      btnNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        updateImage(currentIndex + 1);
+      });
+    }
+  }
+</script>

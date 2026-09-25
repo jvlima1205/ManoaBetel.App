@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "titulo": "Maleta mimo",
+        "descricao": "Uma maleta elegante para presentear com estilo.",
+        "preco": 49.90,
+        "fotos": [
+            "/images/Present/SuitCase/SuitCase1.png",
+            "/images/Present/SuitCase/SuitCase2.png",
+            "/images/Present/SuitCase/SuitCase3.png",
+            "/images/Present/SuitCase/SuitCase4.png"
+        ]
+    },
+    {
+        "id": 2,
+        "titulo": "Lancheira Delicat",
+        "descricao": "Uma lancheira charmosa para levar sua comidinha.",
+        "preco": 29.90,
+        "fotos": [
+            "/images/Present/LunchBox/LunchBox1.png",
+            "/images/Present/LunchBox/LunchBox2.png"
+        ]
+    },
+    {
+        "id": 3,
+        "titulo": "Trufas e Bombons",
+        "descricao": "Cestas, petiscos e doces.",
+        "preco": 59.90,
+        "fotos": [
+            "/images/Present/Bonbon/Bonbon1.png",
+            "/images/Present/Bonbon/Bonbon2.png",
+            "/images/Present/Bonbon/Bonbon3.png",
+            "/images/Present/Bonbon/Bonbon4.png",
+            "/images/Present/Bonbon/Bonbon5.png"
+        ]
+    },
+    {
+        "id": 4,
+        "titulo": "Caixa de Surpresas",
+        "descricao": "Uma caixa cheia de surpresas para alegrar o dia.",
+        "preco": 39.90,
+        "fotos": [
+            "/images/Present/SurpriseBox/SurpriseBox1.png",
+            "/images/Present/SurpriseBox/SurpriseBox2.png",
+            "/images/Present/SurpriseBox/SurpriseBox3.png",
+            "/images/Present/SurpriseBox/SurpriseBox4.png",
+            "/images/Present/SurpriseBox/SurpriseBox5.png"
+        ]
+    }
+]

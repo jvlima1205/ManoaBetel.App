@@ -1,13 +1,43 @@
 ---
 import Layout from "../layouts/layout.astro";
 import Title from "../components/Title.astro";
+
+import CardIndex from "../components/CardIndex.astro";
+
+import Bibles from "../data/Bibles.json";
+import Presents from "../data/Present.json";
 ---
 
 <Layout>
   <Title
-    title="Seja bem vindo à Manoá Betel Art's"
-    subtitle="Encontre seus produtos de qualidade."
+    title="Presentes Acessórios e Utilidades"
+    subtitle="Artesanato pra você se inspirar, usar e presentear."
   />
 
-
+  <!-- Grid Responsivo de Produtos -->
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+    {
+      Bibles.slice(0, 1).map((bible) => (
+        <CardIndex
+          titulo={bible.titulo}
+          descricao={bible.descricao}
+          preco={bible.preco}
+          fotos={bible.fotos}
+          link="/Cover"
+        />
+      ))
+    }
+    {
+      Presents.slice(0, 1).map((Present) => (
+        <CardIndex
+          titulo={Present.titulo}
+          descricao={Present.descricao}
+          preco={Present.preco}
+          fotos={Present.fotos}
+          link="/Present"
+        />
+      ))
+    }
+  </div>
 </Layout>
