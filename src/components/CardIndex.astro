@@ -3,10 +3,15 @@
 // Substituímos "foto" por "fotos" (um array de URLs/caminhos de imagem)
 const { titulo, descricao, preco, fotos = [], link } = Astro.props;
 
-// Garante que fotos seja sempre um array (caso passem foto única ou nada)
-const listaFotos = Array.isArray(fotos) && fotos.length > 0 
+// 1. Pega a lista original
+const fotosCruas = Array.isArray(fotos) && fotos.length > 0 
   ? fotos 
   : [Astro.props.foto || "/placeholder.jpg"];
+
+// 2. Adiciona a BASE_URL em CADA item do array
+const listaFotos = fotosCruas.map(
+  (foto) => `${import.meta.env.BASE_URL}${foto.startsWith('/') ? '' : '/'}${foto}`
+);
 ---
 
 <div data-card-bible class="bg-white rounded-2xl p-4 border border-rose-200 shadow-sm hover:shadow-md transition">
