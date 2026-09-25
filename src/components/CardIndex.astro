@@ -86,6 +86,26 @@ const listaFotos = fotosCruas.map(
         &times;
       </button>
     </div>
+    {listaFotos.length > 1 && (
+      <>
+        <button
+          type="button"
+          data-lightbox-prev
+          class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/15 px-4 py-2 text-2xl hover:bg-white/25"
+          aria-label="Foto anterior"
+        >
+          &#10094;
+        </button>
+        <button
+          type="button"
+          data-lightbox-next
+          class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/15 px-4 py-2 text-2xl hover:bg-white/25"
+          aria-label="Próxima foto"
+        >
+          &#10095;
+        </button>
+      </>
+    )}
   </dialog>
 
   <h3 class="font-bold text-lg text-rose-950">{titulo}</h3>
@@ -116,22 +136,51 @@ const listaFotos = fotosCruas.map(
     const lightboxDialog = container.parentElement.querySelector('[data-lightbox-dialog]');
     const lightboxImage = lightboxDialog?.querySelector('[data-lightbox-img]');
     const lightboxClose = lightboxDialog?.querySelector('[data-lightbox-close]');
+    const lightboxPrev = lightboxDialog?.querySelector('[data-lightbox-prev]');
+    const lightboxNext = lightboxDialog?.querySelector('[data-lightbox-next]');
 
     if (lightboxTrigger && lightboxDialog && lightboxImage) {
+      let lightboxIndex = 0;
+
+      const updateLightbox = (index) => {
+        lightboxIndex = (index + listaFotos.length) % listaFotos.length;
+        lightboxImage.src = listaFotos[lightboxIndex];
+      };
+
       lightboxTrigger.addEventListener('click', () => {
-        lightboxImage.src = img.src;
+        lightboxIndex = Math.max(0, listaFotos.indexOf(img.src));
+        updateLightbox(lightboxIndex);
         lightboxImage.alt = img.alt;
         lightboxDialog.showModal();
       });
 
       lightboxClose?.addEventListener('click', () => lightboxDialog.close());
+      lightboxPrev?.addEventListener('click', (event) => {
+        event.stopPropagation();
+        updateLightbox(lightboxIndex - 1);
+      });
+      lightboxNext?.addEventListener('click', (event) => {
+        event.stopPropagation();
+        updateLightbox(lightboxIndex + 1);
+      });
       lightboxDialog.addEventListener('click', (event) => {
         if (event.target === lightboxDialog) lightboxDialog.close();
       });
+
+      let touchStartX = 0;
+      lightboxDialog.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+      lightboxDialog.addEventListener('touchend', (event) => {
+        const swipeDistance = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(swipeDistance) < 40) return;
+        updateLightbox(lightboxIndex + (swipeDistance < 0 ? 1 : -1));
+      }, { passive: true });
     }
 
     if (btnPrev && btnNext && listaFotos.length > 1) {
       let currentIndex = 0;
+      let touchStartX = 0;
 
       const updateImage = (index) => {
         currentIndex = index;
@@ -153,6 +202,19 @@ const listaFotos = fotosCruas.map(
         e.stopPropagation();
         updateImage(currentIndex + 1);
       });
+
+      container.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', (event) => {
+        const touchEndX = event.changedTouches[0].clientX;
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) < 40) return;
+
+        updateImage(currentIndex + (swipeDistance < 0 ? 1 : -1));
+      }, { passive: true });
     }
   }
 </script>
