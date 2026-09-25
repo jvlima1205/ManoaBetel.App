@@ -26,7 +26,7 @@ const listaFotos = fotosCruas.map(
     >
       <img 
         data-carousel-img 
-        src={`${import.meta.env.BASE_URL}${listaFotos[0]}`} 
+        src={listaFotos[0]} 
         alt={titulo} 
         class="w-full h-70 object-cover transition-opacity duration-300" 
       />
@@ -68,7 +68,7 @@ const listaFotos = fotosCruas.map(
     <div class="flex h-full w-full items-center justify-center">
       <img
         data-lightbox-img
-        src={`${import.meta.env.BASE_URL}${listaFotos[0]}`}
+        src={listaFotos[0]}
         alt={titulo}
         class="max-h-full max-w-full object-contain"
       />
