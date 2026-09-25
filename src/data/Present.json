@@ -5,10 +5,10 @@
         "descricao": "Uma maleta elegante para presentear com estilo.",
         "preco": 19.90,
         "fotos": [
-            "/images/Present/SuitCase/SuitCase1.png",
-            "/images/Present/SuitCase/SuitCase2.png",
-            "/images/Present/SuitCase/SuitCase3.png",
-            "/images/Present/SuitCase/SuitCase4.png"
+            "/images/Present/SuitCase/SuitCase1.webp",
+            "/images/Present/SuitCase/SuitCase2.webp",
+            "/images/Present/SuitCase/SuitCase3.webp",
+            "/images/Present/SuitCase/SuitCase4.webp"
         ]
     },
     {
@@ -17,8 +17,8 @@
         "descricao": "Uma lancheira charmosa para levar sua comidinha.",
         "preco": 19.90,
         "fotos": [
-            "/images/Present/LunchBox/LunchBox1.png",
-            "/images/Present/LunchBox/LunchBox2.png"
+            "/images/Present/LunchBox/LunchBox1.webp",
+            "/images/Present/LunchBox/LunchBox2.webp"
         ]
     },
     {
@@ -27,11 +27,11 @@
         "descricao": "Cestas, petiscos e doces.",
         "preco": 19.90,
         "fotos": [
-            "/images/Present/Bonbon/Bonbon1.png",
-            "/images/Present/Bonbon/Bonbon2.png",
-            "/images/Present/Bonbon/Bonbon3.png",
-            "/images/Present/Bonbon/Bonbon4.png",
-            "/images/Present/Bonbon/Bonbon5.png"
+            "/images/Present/Bonbon/Bonbon1.webp",
+            "/images/Present/Bonbon/Bonbon2.webp",
+            "/images/Present/Bonbon/Bonbon3.webp",
+            "/images/Present/Bonbon/Bonbon4.webp",
+            "/images/Present/Bonbon/Bonbon5.webp"
         ]
     },
     {
@@ -40,11 +40,11 @@
         "descricao": "Uma caixa cheia de surpresas para alegrar o dia.",
         "preco": 19.90,
         "fotos": [
-            "/images/Present/SurpriseBox/SurpriseBox1.png",
-            "/images/Present/SurpriseBox/SurpriseBox2.png",
-            "/images/Present/SurpriseBox/SurpriseBox3.png",
-            "/images/Present/SurpriseBox/SurpriseBox4.png",
-            "/images/Present/SurpriseBox/SurpriseBox5.png"
+            "/images/Present/SurpriseBox/SurpriseBox1.webp",
+            "/images/Present/SurpriseBox/SurpriseBox2.webp",
+            "/images/Present/SurpriseBox/SurpriseBox3.webp",
+            "/images/Present/SurpriseBox/SurpriseBox4.webp",
+            "/images/Present/SurpriseBox/SurpriseBox5.webp"
         ]
     }
 ]

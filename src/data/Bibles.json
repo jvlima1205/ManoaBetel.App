@@ -5,14 +5,14 @@
         "descricao": "Brilhante como a estrela de Davi.",
         "preco": 19.90,
         "fotos": [
-            "/images/Biblia/BibliaBrilho/BibliaBrilho1.png",
-            "/images/Biblia/BibliaBrilho/BibliaBrilho2.png",
-            "/images/Biblia/BibliaBrilho/BibliaBrilho3.png",
-            "/images/Biblia/BibliaBrilho/BibliaBrilho4.png",
-            "/images/Biblia/BibliaBrilho/BibliaBrilho5.png",
-            "/images/Biblia/BibliaBrilho/BibliaBrilho6.png",
-            "/images/Biblia/BibliaBrilho/BibliaBrilho7.png",
-            "/images/Biblia/BibliaBrilho/BibliaBrilho8.png"
+            "/images/Biblia/BibliaBrilho/BibliaBrilho1.webp",
+            "/images/Biblia/BibliaBrilho/BibliaBrilho2.webp",
+            "/images/Biblia/BibliaBrilho/BibliaBrilho3.webp",
+            "/images/Biblia/BibliaBrilho/BibliaBrilho4.webp",
+            "/images/Biblia/BibliaBrilho/BibliaBrilho5.webp",
+            "/images/Biblia/BibliaBrilho/BibliaBrilho6.webp",
+            "/images/Biblia/BibliaBrilho/BibliaBrilho7.webp",
+            "/images/Biblia/BibliaBrilho/BibliaBrilho8.webp"
         ]
     },
     {
@@ -21,16 +21,16 @@
         "descricao": "Flores que inspiram a fé.",
         "preco": 19.90,
         "fotos": [
-            "/images/Biblia/BibliaFloral/BibliaFloral1.png",
-            "/images/Biblia/BibliaFloral/BibliaFloral2.png",
-            "/images/Biblia/BibliaFloral/BibliaFloral3.png",
-            "/images/Biblia/BibliaFloral/BibliaFloral4.png",
-            "/images/Biblia/BibliaFloral/BibliaFloral5.png",
-            "/images/Biblia/BibliaFloral/BibliaFloral6.png",
-            "/images/Biblia/BibliaFloral/BibliaFloral7.png",
-            "/images/Biblia/BibliaFloral/BibliaFloral8.png",
-            "/images/Biblia/BibliaFloral/BibliaFloral9.png",
-            "/images/Biblia/BibliaFloral/BibliaFloral10.png"
+            "/images/Biblia/BibliaFloral/BibliaFloral1.webp",
+            "/images/Biblia/BibliaFloral/BibliaFloral2.webp",
+            "/images/Biblia/BibliaFloral/BibliaFloral3.webp",
+            "/images/Biblia/BibliaFloral/BibliaFloral4.webp",
+            "/images/Biblia/BibliaFloral/BibliaFloral5.webp",
+            "/images/Biblia/BibliaFloral/BibliaFloral6.webp",
+            "/images/Biblia/BibliaFloral/BibliaFloral7.webp",
+            "/images/Biblia/BibliaFloral/BibliaFloral8.webp",
+            "/images/Biblia/BibliaFloral/BibliaFloral9.webp",
+            "/images/Biblia/BibliaFloral/BibliaFloral10.webp"
         ]
     },
     {
@@ -39,10 +39,10 @@
         "descricao": "Para os jovens que buscam inspiração.",
         "preco": 19.90,
         "fotos": [
-            "/images/Biblia/BibliaTeens/BibliaTeens1.png",
-            "/images/Biblia/BibliaTeens/BibliaTeens2.png",
-            "/images/Biblia/BibliaTeens/BibliaTeens3.png",
-            "/images/Biblia/BibliaTeens/BibliaTeens4.png"
+            "/images/Biblia/BibliaTeens/BibliaTeens1.webp",
+            "/images/Biblia/BibliaTeens/BibliaTeens2.webp",
+            "/images/Biblia/BibliaTeens/BibliaTeens3.webp",
+            "/images/Biblia/BibliaTeens/BibliaTeens4.webp"
         ]
     },
     {
@@ -51,15 +51,15 @@
         "descricao": "Estampas que refletem a natureza.",
         "preco": 19.90,
         "fotos": [
-            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints1.png",
-            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints2.png",
-            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints3.png",
-            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints4.png",
-            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints5.png",
-            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints6.png",
-            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints7.png",
-            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints8.png",
-            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints9.png"
+            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints1.webp",
+            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints2.webp",
+            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints3.webp",
+            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints4.webp",
+            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints5.webp",
+            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints6.webp",
+            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints7.webp",
+            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints8.webp",
+            "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints9.webp"
         ]
     },
     {
@@ -68,14 +68,14 @@
         "descricao": "Designs geométricos que encantam.",
         "preco": 19.90,
         "fotos": [
-            "/images/Biblia/BibliaGeometrics/BibliaGeometrics1.png",
-            "/images/Biblia/BibliaGeometrics/BibliaGeometrics2.png",
-            "/images/Biblia/BibliaGeometrics/BibliaGeometrics3.png",
-            "/images/Biblia/BibliaGeometrics/BibliaGeometrics4.png",
-            "/images/Biblia/BibliaGeometrics/BibliaGeometrics5.png",
-            "/images/Biblia/BibliaGeometrics/BibliaGeometrics6.png",
-            "/images/Biblia/BibliaGeometrics/BibliaGeometrics7.png",
-            "/images/Biblia/BibliaGeometrics/BibliaGeometrics8.png"
+            "/images/Biblia/BibliaGeometrics/BibliaGeometrics1.webp",
+            "/images/Biblia/BibliaGeometrics/BibliaGeometrics2.webp",
+            "/images/Biblia/BibliaGeometrics/BibliaGeometrics3.webp",
+            "/images/Biblia/BibliaGeometrics/BibliaGeometrics4.webp",
+            "/images/Biblia/BibliaGeometrics/BibliaGeometrics5.webp",
+            "/images/Biblia/BibliaGeometrics/BibliaGeometrics6.webp",
+            "/images/Biblia/BibliaGeometrics/BibliaGeometrics7.webp",
+            "/images/Biblia/BibliaGeometrics/BibliaGeometrics8.webp"
         ]
     },
     {
@@ -84,14 +84,14 @@
         "descricao": "Designs para o estilo masculino.",
         "preco": 19.90,
         "fotos": [
-            "/images/Biblia/BibliaMasculina/BibliaMasculina1.png",
-            "/images/Biblia/BibliaMasculina/BibliaMasculina2.png",
-            "/images/Biblia/BibliaMasculina/BibliaMasculina3.png",
-            "/images/Biblia/BibliaMasculina/BibliaMasculina4.png",
-            "/images/Biblia/BibliaMasculina/BibliaMasculina5.png",
-            "/images/Biblia/BibliaMasculina/BibliaMasculina6.png",
-            "/images/Biblia/BibliaMasculina/BibliaMasculina7.png",
-            "/images/Biblia/BibliaMasculina/BibliaMasculina8.png"
+            "/images/Biblia/BibliaMasculina/BibliaMasculina1.webp",
+            "/images/Biblia/BibliaMasculina/BibliaMasculina2.webp",
+            "/images/Biblia/BibliaMasculina/BibliaMasculina3.webp",
+            "/images/Biblia/BibliaMasculina/BibliaMasculina4.webp",
+            "/images/Biblia/BibliaMasculina/BibliaMasculina5.webp",
+            "/images/Biblia/BibliaMasculina/BibliaMasculina6.webp",
+            "/images/Biblia/BibliaMasculina/BibliaMasculina7.webp",
+            "/images/Biblia/BibliaMasculina/BibliaMasculina8.webp"
         ]
     }
 ]
