@@ -5,19 +5,19 @@
         "descricao": "Conjunto de acessórios.",
         "preco": 19.90,
         "fotos": [
-            "/images/Accessories/Group/Group1.png",
-            "/images/Accessories/Group/Group2.png",
-            "/images/Accessories/Group/Group3.png",
-            "/images/Accessories/Group/Group4.png",
-            "/images/Accessories/Group/Group5.png",
-            "/images/Accessories/Group/Group6.png",
-            "/images/Accessories/Group/Group7.png",
-            "/images/Accessories/Group/Group8.png",
-            "/images/Accessories/Group/Group9.png",
-            "/images/Accessories/Group/Group10.png",
-            "/images/Accessories/Group/Group11.png",
-            "/images/Accessories/Group/Group12.png",
-            "/images/Accessories/Group/Group13.png"
+            "/images/Accessories/Group/Group1.webp",
+            "/images/Accessories/Group/Group2.webp",
+            "/images/Accessories/Group/Group3.webp",
+            "/images/Accessories/Group/Group4.webp",
+            "/images/Accessories/Group/Group5.webp",
+            "/images/Accessories/Group/Group6.webp",
+            "/images/Accessories/Group/Group7.webp",
+            "/images/Accessories/Group/Group8.webp",
+            "/images/Accessories/Group/Group9.webp",
+            "/images/Accessories/Group/Group10.webp",
+            "/images/Accessories/Group/Group11.webp",
+            "/images/Accessories/Group/Group12.webp",
+            "/images/Accessories/Group/Group13.webp"
         ]
     },
     {
@@ -26,15 +26,15 @@
         "descricao": "Elegância e praticidade em uma única peça.",
         "preco": 19.90,
         "fotos": [
-            "/images/Accessories/Wallet/Wallet1.png",
-            "/images/Accessories/Wallet/Wallet2.png",
-            "/images/Accessories/Wallet/Wallet3.png",
-            "/images/Accessories/Wallet/Wallet4.png",
-            "/images/Accessories/Wallet/Wallet5.png",
-            "/images/Accessories/Wallet/Wallet6.png",
-            "/images/Accessories/Wallet/Wallet7.png",
-            "/images/Accessories/Wallet/Wallet8.png",
-            "/images/Accessories/Wallet/Wallet9.png"
+            "/images/Accessories/Wallet/Wallet1.webp",
+            "/images/Accessories/Wallet/Wallet2.webp",
+            "/images/Accessories/Wallet/Wallet3.webp",
+            "/images/Accessories/Wallet/Wallet4.webp",
+            "/images/Accessories/Wallet/Wallet5.webp",
+            "/images/Accessories/Wallet/Wallet6.webp",
+            "/images/Accessories/Wallet/Wallet7.webp",
+            "/images/Accessories/Wallet/Wallet8.webp",
+            "/images/Accessories/Wallet/Wallet9.webp"
         ]
     }
 ]
