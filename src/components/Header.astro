@@ -19,32 +19,48 @@
       </div>
     </div>
 
-    <details class="relative md:hidden">
-      <summary
-        class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-md hover:bg-amber-700 focus:outline-2 focus:outline-offset-2 focus:outline-white [&::-webkit-details-marker]:hidden"
-        aria-label="Abrir menu de navegação">
+    <div class="md:hidden">
+      <button
+        type="button"
+        class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md hover:bg-amber-700 focus:outline-2 focus:outline-offset-2 focus:outline-white"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+        data-menu-toggle>
         <span class="sr-only">Abrir menu</span>
         <span class="flex w-5 flex-col gap-1" aria-hidden="true">
           <span class="h-0.5 w-full bg-white"></span>
           <span class="h-0.5 w-full bg-white"></span>
           <span class="h-0.5 w-full bg-white"></span>
         </span>
-      </summary>
-      <nav class="absolute right-0 top-12 z-10 min-w-48 rounded-md bg-white p-2 text-sm font-medium text-amber-950 shadow-lg">
-        <a href={`${import.meta.env.BASE_URL}/`} class="block rounded px-3 py-2 hover:bg-amber-50">
-          Início
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/Cover`} class="block rounded px-3 py-2 hover:bg-amber-50">
-          Capas
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/Present`} class="block rounded px-3 py-2 hover:bg-amber-50">
-          Presentes
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/Accessories`} class="block rounded px-3 py-2 hover:bg-amber-50">
-          Acessórios
-        </a>
-      </nav>
-    </details>
+      </button>
+
+      <div class="fixed inset-0 z-20 hidden bg-amber-950/50" data-menu-overlay></div>
+
+      <aside
+        id="mobile-navigation"
+        class="fixed bottom-0 left-0 top-0 z-30 hidden w-1/2 bg-rose-50 p-6 text-amber-950 shadow-2xl"
+        aria-label="Menu de navegação"
+        aria-hidden="true"
+        data-menu-panel>
+        <div class="mb-8 flex items-center justify-between gap-4">
+          <span class="font-serif text-lg font-semibold">Navegação</span>
+          <button
+            type="button"
+            class="flex h-10 w-10 items-center justify-center rounded-md text-2xl leading-none hover:bg-rose-100 focus:outline-2 focus:outline-offset-2 focus:outline-amber-700"
+            aria-label="Fechar menu de navegação"
+            data-menu-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-2 text-sm font-medium">
+          <a href={`${import.meta.env.BASE_URL}/`} class="rounded-md px-3 py-3 hover:bg-rose-100">Início</a>
+          <a href={`${import.meta.env.BASE_URL}/Cover`} class="rounded-md px-3 py-3 hover:bg-rose-100">Capas</a>
+          <a href={`${import.meta.env.BASE_URL}/Present`} class="rounded-md px-3 py-3 hover:bg-rose-100">Presentes</a>
+          <a href={`${import.meta.env.BASE_URL}/Accessories`} class="rounded-md px-3 py-3 hover:bg-rose-100">Acessórios</a>
+        </nav>
+      </aside>
+    </div>
 
     <nav class="hidden space-x-4 text-amber-50 text-sm font-medium md:block">
       <a href={`${import.meta.env.BASE_URL}/`} class="hover:underline">
@@ -64,3 +80,32 @@
     </nav>
   </div>
 </header>
+
+<script>
+  const setMenuOpen = (isOpen: boolean) => {
+    const menuToggle = document.querySelector<HTMLElement>('[data-menu-toggle]');
+    const menuPanel = document.querySelector<HTMLElement>('[data-menu-panel]');
+    const menuOverlay = document.querySelector<HTMLElement>('[data-menu-overlay]');
+
+    menuPanel?.classList.toggle('hidden', !isOpen);
+    menuOverlay?.classList.toggle('hidden', !isOpen);
+    menuToggle?.setAttribute('aria-expanded', String(isOpen));
+    menuPanel?.setAttribute('aria-hidden', String(!isOpen));
+    document.body.classList.toggle('overflow-hidden', isOpen);
+  };
+
+  document.addEventListener('click', (event) => {
+    const target = event.target as Element;
+
+    if (target.closest('[data-menu-toggle]')) setMenuOpen(true);
+    if (target.closest('[data-menu-close], [data-menu-overlay], #mobile-navigation a')) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setMenuOpen(false);
+  });
+
+  document.addEventListener('astro:page-load', () => setMenuOpen(false));
+</script>

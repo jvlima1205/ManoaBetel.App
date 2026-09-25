@@ -28,9 +28,7 @@ const listaFotos = fotosCruas.map(
         data-carousel-img 
         src={listaFotos[0]} 
         alt={titulo} 
-        loading="lazy"
-        decoding="async"
-        class="w-full h-70 object-cover transition-opacity duration-300" 
+        class="w-full h-70 object-cover" 
       />
     </button>
 
@@ -39,14 +37,14 @@ const listaFotos = fotosCruas.map(
       <>
         <button 
           data-prev 
-          class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
           aria-label="Foto anterior"
         >
           &#10094;
         </button>
         <button 
           data-next 
-          class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
           aria-label="Próxima foto"
         >
           &#10095;
@@ -184,10 +182,11 @@ const listaFotos = fotosCruas.map(
         if (currentIndex < 0) currentIndex = listaFotos.length - 1;
         if (currentIndex >= listaFotos.length) currentIndex = 0;
 
-        img.src = listaFotos[currentIndex];
         if (counter) {
           counter.textContent = `${currentIndex + 1} / ${listaFotos.length}`;
         }
+
+        img.src = listaFotos[currentIndex];
       };
 
       btnPrev.addEventListener('click', (e) => {
@@ -210,7 +209,8 @@ const listaFotos = fotosCruas.map(
 
         if (Math.abs(swipeDistance) < 40) return;
 
-        updateImage(currentIndex + (swipeDistance < 0 ? 1 : -1));
+        const direction = swipeDistance < 0 ? 1 : -1;
+        updateImage(currentIndex + direction);
       }, { passive: true });
     }
   }
