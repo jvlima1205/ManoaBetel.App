@@ -3,7 +3,7 @@
         "id": 1,
         "titulo": "Com Brilho",
         "descricao": "Brilhante como a estrela de Davi.",
-        "preco": 49.90,
+        "preco": 19.90,
         "fotos": [
             "/images/Biblia/BibliaBrilho/BibliaBrilho1.png",
             "/images/Biblia/BibliaBrilho/BibliaBrilho2.png",
@@ -19,7 +19,7 @@
         "id": 2,
         "titulo": "Floral",
         "descricao": "Flores que inspiram a fé.",
-        "preco": 59.90,
+        "preco": 19.90,
         "fotos": [
             "/images/Biblia/BibliaFloral/BibliaFloral1.png",
             "/images/Biblia/BibliaFloral/BibliaFloral2.png",
@@ -37,7 +37,7 @@
         "id": 3,
         "titulo": "Teens",
         "descricao": "Para os jovens que buscam inspiração.",
-        "preco": 39.90,
+        "preco": 19.90,
         "fotos": [
             "/images/Biblia/BibliaTeens/BibliaTeens1.png",
             "/images/Biblia/BibliaTeens/BibliaTeens2.png",
@@ -49,7 +49,7 @@
         "id": 4,
         "titulo": "Animal prints",
         "descricao": "Estampas que refletem a natureza.",
-        "preco": 69.90,
+        "preco": 19.90,
         "fotos": [
             "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints1.png",
             "/images/Biblia/BibliaAnimalPrints/BibliaAnimalPrints2.png",
@@ -66,7 +66,7 @@
         "id": 5,
         "titulo": "Geometrics",
         "descricao": "Designs geométricos que encantam.",
-        "preco": 79.90,
+        "preco": 19.90,
         "fotos": [
             "/images/Biblia/BibliaGeometrics/BibliaGeometrics1.png",
             "/images/Biblia/BibliaGeometrics/BibliaGeometrics2.png",
@@ -82,7 +82,7 @@
         "id": 6,
         "titulo": "Para Eles? Temos Também",
         "descricao": "Designs para o estilo masculino.",
-        "preco": 99.90,
+        "preco": 19.90,
         "fotos": [
             "/images/Biblia/BibliaMasculina/BibliaMasculina1.png",
             "/images/Biblia/BibliaMasculina/BibliaMasculina2.png",

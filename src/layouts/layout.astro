@@ -15,7 +15,26 @@ const { title = "Manoá Betel" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <link rel="shortcut icon" href="Favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="Favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Fonte geral do site (textos, descrições, preços e botões) */
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      /* Fonte sofisticada para os títulos (nome do produto, seções, cabeçalho) */
+      h1, h2, h3, h4, h5,h6 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600; /* Deixa o título levemente encorpado */
+      }
+    </style>
+    
     <!-- Este componente ativa o modo SPA (View Transitions) no seu site inteiro -->
     <ClientRouter />
   </head>

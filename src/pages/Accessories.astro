@@ -1,29 +1,28 @@
 ---
 import Layout from "../layouts/layout.astro";
 import CardProduct from "../components/CardProduct.astro";
-
 // Importa o arquivo JSON contendo os dados dos produtos
-import Presents from "../data/Present.json";
+import Accessories from "../data/Accessories.json";
 
 import Title from "../components/Title.astro";
 ---
 
 <Layout>
   <Title
-    title="Presenteie com originalidade"
-    subtitle="Encontre o presente perfeito para qualquer ocasião."
+    title="Carteiras e Acessórios"
+    subtitle="Descubra nossas carteiras e acessórios artesanais, feitos com cuidado e atenção aos detalhes."
   />
 
   <!-- Grid Responsivo de Produtos -->
   <div
     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
     {
-      Presents.map((Present) => (
+      Accessories.map((accessory) => (
         <CardProduct
-          titulo={Present.titulo}
-          descricao={Present.descricao}
-          preco={Present.preco}
-          fotos={Present.fotos}
+          titulo={accessory.titulo}
+          descricao={accessory.descricao}
+          preco={accessory.preco}
+          fotos={accessory.fotos}
         />
       ))
     }

@@ -6,6 +6,7 @@ import CardIndex from "../components/CardIndex.astro";
 
 import Bibles from "../data/Bibles.json";
 import Presents from "../data/Present.json";
+import Accessories from "../data/Accessories.json";
 ---
 
 <Layout>
@@ -36,6 +37,17 @@ import Presents from "../data/Present.json";
           preco={Present.preco}
           fotos={Present.fotos}
           link="/Present"
+        />
+      ))
+    }
+    {
+      Accessories.slice(0, 1).map((Accessory) => (
+        <CardIndex
+          titulo={Accessory.titulo}
+          descricao={Accessory.descricao}
+          preco={Accessory.preco}
+          fotos={Accessory.fotos}
+          link="/Accessories"
         />
       ))
     }
