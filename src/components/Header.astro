@@ -7,7 +7,7 @@
   <div class="max-w-6xl mx-auto flex justify-between items-center">
     <div class="flex items-center space-x-4">
       <img
-        src="{`${import.meta.env.BASE_URL}/images/Logo/Logo.png`}"
+        src={`${import.meta.env.BASE_URL}/images/Logo/Logo.png`}
         alt="Logo do site"
         class="h-12 w-auto"
       />
@@ -17,12 +17,20 @@
       </div>
     </div>
     <nav class="space-x-4 text-amber-50 text-sm font-medium">
-      <a href="{`${import.meta.env.BASE_URL}/`}" class="hover:underline"
-        >Início</a
-      >
-      <a href="{`${import.meta.env.BASE_URL}/Cover`}" class="hover:underline">Capas</a>
-      <a href="{`${import.meta.env.BASE_URL}/Present`}" class="hover:underline">Presentes</a>
-      <a href="{`${import.meta.env.BASE_URL}/Accessories`}" class="hover:underline">Acessórios</a>
+      <a href={`${import.meta.env.BASE_URL}/`} class="hover:underline">
+        Início
+      </a>
+      <a href={`${import.meta.env.BASE_URL}/Cover`} class="hover:underline">
+        Capas
+      </a>
+      <a href={`${import.meta.env.BASE_URL}/Present`} class="hover:underline">
+        Presentes
+      </a>
+      <a
+        href={`${import.meta.env.BASE_URL}/Accessories`}
+        class="hover:underline">
+        Acessórios
+      </a>
     </nav>
   </div>
 </header>
