@@ -25,7 +25,7 @@ import Accessories from "../data/Accessories.json";
           descricao={bible.descricao}
           preco={bible.preco}
           fotos={bible.fotos}
-          link="/Cover"
+          link={`${import.meta.env.BASE_URL}/Cover`}
         />
       ))
     }
@@ -36,7 +36,7 @@ import Accessories from "../data/Accessories.json";
           descricao={Present.descricao}
           preco={Present.preco}
           fotos={Present.fotos}
-          link="/Present"
+          link={`${import.meta.env.BASE_URL}/Present`}
         />
       ))
     }
@@ -47,7 +47,7 @@ import Accessories from "../data/Accessories.json";
           descricao={Accessory.descricao}
           preco={Accessory.preco}
           fotos={Accessory.fotos}
-          link="/Accessories"
+          link={`${import.meta.env.BASE_URL}/Accessories`}
         />
       ))
     }
